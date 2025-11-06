@@ -1,5 +1,8 @@
 import streamlit as st
 import pandas as pd
+pwd = st.text_input("Внеси лозинка за пристап:", type="password")
+if pwd != st.secrets.get("PASSWORD"):
+    st.stop()
 
 # Конфигурација на страницата
 st.set_page_config(page_title="Ангел 3 - Преглед", layout="wide")
